@@ -73,10 +73,10 @@ function handleSubmit(e){
     <div>
         <form onSubmit={e=>handleSubmit(e)}>
             <input type="email" id="input-email" value={email} onChange={e=>setEmail(e.target.value)}/>
+               <p id="user-error">{emailerror}</p>
             <input type="password" id="input-password" value={password} onChange={e=>setPassword(e.target.value)}/>
+               <p id="password-error">{passworderror}</p>
             <button id="submit-form-btn">Login</button>
-            {emailerror && <p id="user-error">{emailerror}</p>}
-            {passworderror && <p id="password-error">{passworderror}</p>}
         </form>
     </div>
   )
